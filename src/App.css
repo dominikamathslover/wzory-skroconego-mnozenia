@@ -70,6 +70,7 @@ h3 {
 main {
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 
 /* =================================
@@ -123,8 +124,9 @@ select,
 
 .rozwiazanie {
   background-color: rgba(174, 232, 251, 0.293);
-  padding: 0.5em;
+  padding: 1em 1.5em;
   border-radius: var(--border-radius);
+  overflow: auto;
 }
 
 .parabola-img {
@@ -143,4 +145,22 @@ select,
 
 .katex .msupsub .sizing {
   font-size: 0.8em;
+}
+
+/* =================================
+   responsive
+================================= */
+
+@media (min-width: 700px) {
+  main {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .btn-zobacz-rozwiazanie,
+  .select-zadanie {
+    max-width: 400px;
+  }
+  section {
+    width: 45%;
+  }
 }
